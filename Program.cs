@@ -408,13 +408,69 @@ namespace Assignnment2_1
             }             
             return default;
             }
+        
+        public static char[] UniqueLetters(string word, string word2, string word3)
+        {
+            char[] uniqueLetters= new char[] { };
 
+            string allLetters = word + word2 + word3;
+
+            for(int number=0; number<allLetters.Length; number++)
+            {
+                char letter = allLetters[number];
+                
+                if (uniqueLetters.Contains(letter)==false)
+                {
+                    uniqueLetters.Append(letter);
+                }
+
+            }
+            
+
+            return uniqueLetters;
+        }
         public static void SolvePuzzle()
 
         {
             try
             {                 
+                string input1 = "UBER";
+                string input2 = "COOL";
+                string sumInput = "UNCLE";
+
                 
+                char[] input1Array = input1.ToArray();
+                char[] input2Array = input2.ToArray();
+                char[] sumInputArray = sumInput.ToArray();
+
+                
+
+                //for loop through all the arrays at once
+                //begin at last index and work my way back
+                //if the characters are same, then assign 0 to that character
+                List<int> possibleDigits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+                
+
+                char[] uniqueLetters=UniqueLetters(input1, input2, sumInput);
+                var dict = new Dictionary<char, int>();
+                foreach(char letter in uniqueLetters)
+                {
+                    
+                }
+
+                for (int count=0; count>10; count--)
+                {
+                    char letter1 = input1Array[count];
+                    char letter2 = input2Array[count];
+                    char letter3 = sumInputArray[count];
+
+
+                }
+                // Every letter is a number between 0 and 9
+                // No 2 letters will have the same number value
+                // two input strings have to equal output string
+                // if output number's length =n and both input words length n-1, leftmost digit ==1
+                // if output number's length == length of both input words, leftmostdigit>=2
             }
             catch (Exception)
             {
