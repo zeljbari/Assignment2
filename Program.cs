@@ -12,6 +12,7 @@ namespace Assignnment2_1
             int[] l1 = new int[] { 5, 6, 6, 9, 9, 12 };
             int target = 9;
             int[] r = TargetRange(l1, target);
+
             Console.WriteLine("[" + r[0] + "," + r[1] + "]");
 
             Console.WriteLine(" ");
@@ -56,7 +57,6 @@ namespace Assignnment2_1
             Console.WriteLine(DictSearch(userDict, keyword));
             Console.WriteLine("Question 9");
             SolvePuzzle();
-
         }
 
         public static void DisplayArray(int[] a)
