@@ -15,9 +15,9 @@ namespace Assignment2_CT_Spring2020
             for (int f = 0; f <= r.Length - 1; f++) // prints value of r
             {
                 if (f != r.Length - 1)
-                    Console.Write(r[f] + ",");
+                    Console.Write(r[f]+ " ");
                 else
-                    Console.Write(r[f] + "");
+                    Console.Write(r[f]);
                
             }
 
